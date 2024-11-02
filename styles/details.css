@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+section > p {
+    font-size: 30px;
+    padding: 20px;
+}
+.center {
+    text-align: center;
+    font-size: 100px;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+}

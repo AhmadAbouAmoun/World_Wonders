@@ -5,7 +5,6 @@ const world_wonders = async () => {
         const response = await fetch("https://www.world-wonders-api.org/v0/wonders");
         const data = await response.json();
 
-        console.log(data);
         data.forEach((element) => {
             section.innerHTML += ` <div class="book">
         <div class="details">
@@ -25,19 +24,10 @@ const world_wonders = async () => {
         buttons.forEach((button) => {
             button.addEventListener("click", () => {
                 const value = button.value;
-                console.log(value);
+                localStorage.setItem("value", value);
+                window.location.href = "details.html";
             });
         });
     }
 };
 world_wonders();
-
-function ShareData() {
-    var user_name = document.getElementById("username").value;
-    var option = document.getElementById("Character").value;
-    if (user_name) {
-        localStorage.setItem("username", user_name);
-        localStorage.setItem("character", option);
-        window.location.href = "Game.html";
-    } else alert("Please first enter a user name");
-}
