@@ -1,8 +1,15 @@
+* {
+    margin: 0;
+}
 body {
     display: flex;
     flex-direction: column;
 }
-
+header {
+    text-align: center;
+    font-size: 40px;
+    background-color: #b9b9b9;
+}
 img {
     width: 100%;
     height: 200px;
